@@ -214,7 +214,20 @@ PUT /articles/{id}  #met à jour un article existant, celui associé à l'ID
 DELETE /articles/{id}  #supprime l'article
 ```
 
+Maintenant, admettons qu'on ajoute une table Tag, un article peut avoir plusieurs tag et un tag peut être associé à plusieurs articles.
 
+Si l'on souhaite récupérer la liste des tags associés à un article
+
+```bash
+GET /articles/{id}/tags
+```
+
+Ajouter un tag à l'article
+```bash
+PUT /articles/{id}/tags
+```
+
+[Un exemple de documentation d'une API REST simple](http://petstore.swagger.io/)
 
 
 
