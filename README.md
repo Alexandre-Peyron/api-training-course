@@ -61,7 +61,7 @@ Response body
 > L'acronyme HTTP signifie Hypertext Transfer Protocol (traduction: protocole de transfert hypertexte). 
 Ce protocole définie la communication entre un client (exemple: navigateur) et un serveur sur le World Wide Web (WWW).
 
-[Schema requête HTTP](./images/schema-requete-http.jpg "Schema requête HTTP")
+![Schema requête HTTP](./images/schema-requete-http.jpg "Schema requête HTTP")
 
 Concrètement, qu'est-ce qu'il vient de se passer ?
 
@@ -122,40 +122,38 @@ Les éléments importants :
 
 #### Les méthodes HTTP
 
-##### GET
-Pour récupérer des ressources. Soit le détail d'une seule, soit une liste.
+Voici toutes les actions de bases qu'on peut effectuer sur une ressource : 
 
-##### POST
-Pour créer une nouvelle ressources.
+- GET - Pour récupérer des ressources. Soit le détail d'une seule, soit une liste.
+- POST - Pour créer une nouvelle ressources.
+- PUT/PATCH - Mettre à jour une ressource.
+- DELETE - Supprimer une ressource.
 
-##### PUT/PATCH
-Mettre à jour une ressource.
+C'est ce qu'on appelle le CRUD (Create Read Update Delete).
 
-##### DELETE
-Supprimer une ressource.
 
 #### Les codes 
 
-Les codes en 2XX indiquent que tout s'est bien passé.
-- 200 OK
-- 201 CREATED
+* Les codes en 2XX indiquent que tout s'est bien passé.
+  * 200 OK
+  * 201 CREATED
 
-Ceux en 3XX indiquent une redirection, cas qu'on verra rarement dans le cadre d'une API
+* Ceux en 3XX indiquent une redirection, cas qu'on verra rarement dans le cadre d'une API
 
-Les codes en 4XX affichent une erreur côté client
-- 400 Bad Request, la requête est fausse
-- 401 Unauthorized, l'utilisateur doit être authentifié 
-- 403 Fordidden, l'utilisateur est authentifié mais n'a pas le droit d'utiliser cette fonctionnalité
-- 404 Not Found, la plus connue, ressource introuvable
+* Les codes en 4XX affichent une erreur côté client
+  * 400 Bad Request, la requête est fausse
+  * 401 Unauthorized, l'utilisateur doit être authentifié 
+  * 403 Fordidden, l'utilisateur est authentifié mais n'a pas le droit d'utiliser cette fonctionnalité
+  * 404 Not Found, la plus connue, ressource introuvable
 
-Les codes en 5XX, une erreur coté serveur
-- 500 Internal Server Error
-- 504 Gateway Time-out, le script côté serveur est trop long à traiter
+* Les codes en 5XX, une erreur coté serveur
+  * 500 Internal Server Error
+  * 504 Gateway Time-out, le script côté serveur est trop long à traiter
 
 Bonus
 - 418 I'm a teapot
 
-Le détail [ici](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
+Le détail [sur Wikipédia](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
 
 
 ### Développer sa propre API
@@ -169,22 +167,23 @@ pour que chaque application travaille sur la même base. C'est ici le rôle de l
 
 Un dessin vaut mieux qu'on long discours.
 
-[Schema API](./images/schema_api.jpg "Schema API")
+![Schema API](./images/schema_api.jpg "Schema API")
 
 
 #### Les types d'API
 
 - SOAP (Simple Object Access Protocol)
-L'un des premiers système d'API normalisé. Développé initialement par Microsoft et IBM, il est basé sur l'envoi et la réception de XML.
-
-Principal inconvénient : le XML !
-
-Celui-ci alourdi considérablement les échanges client/serveur.
+  
+  L'un des premiers système d'API normalisé. Développé initialement par Microsoft et IBM, il est basé sur l'envoi et la réception de XML.
+  Principal inconvénient : le XML !
+  Celui-ci alourdi considérablement les échanges client/serveur.
 
 - API REST (Representational State Transfer)
+
 Architecture d'API la plus utilisée aujourd'hui. C'est celle qu'on va voir plus en détails dans le suite du cours.
 
 - GraphQL
+
 Alternative montante aux API REST, développé par Facebook.
 
 
