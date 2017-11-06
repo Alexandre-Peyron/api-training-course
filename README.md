@@ -167,7 +167,7 @@ pour que chaque application travaille sur la même base. C'est ici le rôle de l
 
 Un dessin vaut mieux qu'on long discours.
 
-![Schema API](./images/schema_api.jpg "Schema API")
+![Schema API](./images/schema_api.png "Schema API")
 
 
 #### Les types d'API
